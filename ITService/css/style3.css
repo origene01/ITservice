@@ -1,0 +1,399 @@
+:root {
+    --width: 300px;
+    --padding: 8px;
+    --bgcolor: rgb(52, 52, 52);
+    --hovercolor: rgb(19, 139, 148);
+    --width-collapsed: 50px;
+    --menu-color: #01121ae1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+main{
+    font-family: sans-serif;
+    display: grid;
+     align-items: center;
+    margin: 0;
+    color: #eee;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    background: url('https://static.vecteezy.com/system/resources/previews/000/582/800/non_2x/vector-abstract-template-black-frame-layout-with-green-neon-light-on-dark-background-futuristic-technology-concept.jpg');
+    background-position: center;
+     background-size: cover;
+     background-repeat: no-repeat;
+}
+
+.card-2 img {
+    max-width: 90%;
+    border-radius: 50%;
+}
+
+.card-2 {
+    background-color: rgb(18, 1, 66);
+    width: 80%;
+    height: 450px;
+    display: flex;
+    margin: 2em auto;
+    color: #eee;
+    border-radius: 10px;
+}
+
+.card__left {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('https://image.freepik.com/foto-gratis/transformacion-digital-conceptual-era-tecnologica-proxima-generacion_109643-130.jpg');
+    background-position: center;
+    background-size: cover;
+    padding: .5rem 0;
+}
+
+.card__right {
+    width: 80%;
+    /* text-align: center; */
+    padding: 0 1rem;
+}
+
+.card__title {
+    text-transform: uppercase;
+    margin: 1rem 0;
+}
+
+.spinner {
+    border: 4px solid #1df70042;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-left-color: transparent;
+
+    -webkit-animation: spin .7s linear infinite;
+
+    animation: spin .7s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.mensaje {
+    padding: 12px 12px;
+}
+
+.none {
+    display: none;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80%;
+}
+
+.form__group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__nombres {
+    height: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form__nombres input {
+    width: 100%;
+}
+
+.form__label {
+    margin-bottom: .5rem;
+    font-size: .8rem;
+}
+
+.form__input,
+.form__textarea {
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgb(0, 139, 0);
+    color: inherit;
+}
+
+.form__input:focus {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgb(8, 233, 233);
+}
+
+.form__textarea {
+    resize: none;
+    border: none;
+
+    border-bottom: 1px solid #eee;
+    flex-basis: 100px;
+}
+
+.form__textarea:focus {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgb(8, 169, 233);
+}
+
+.success {
+    border-bottom: 1px solid hsl(133, 93%, 41%);
+}
+
+.error {
+    border-bottom: 1px solid #ff0000;
+}
+
+.form__submit {
+    cursor: pointer;
+    width: 30%;
+    background: rgb(8, 167, 230);
+    border: none;
+    padding: .8rem;
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: inherit;
+}
+
+.form__submit:hover {
+    background: rgb(4, 144, 199);
+}
+
+@media screen and (max-width:600px) {
+    .card__right {
+        width: 100%;
+    }
+}
+
+.body-expanded {
+    margin-left: var(--width);
+}
+
+#main-container {
+    color: #000;
+}
+
+#sidemenu {
+    background-color: var(--menu-color);
+    color: white;
+    position: fixed;
+    transition: 0.4s ease;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2000;
+}
+
+#sidemenu a {
+    color: white;
+    text-decoration: none;
+}
+
+#sidemenu #header {
+    box-sizing: border-box;
+    border-bottom: solid 1px rgba(82, 82, 112, 0.39);
+
+}
+
+#sidemenu #header #title {
+    box-sizing: border-box;
+    margin-left: 7.5em;
+    justify-content: center;
+    overflow: hidden;
+    transition: 0.5s ease all;
+    text-align: center;
+
+}
+
+#sidemenu #header #title,
+#sidemenu #header #menu-btn {
+    vertical-align: middle;
+}
+
+#sidemenu #header #menu #menu-btn {
+    display: inline-block;
+    transition: ease-in-out 1s;
+}
+
+#sidemenu #header #menu-btn {
+    cursor: pointer;
+    padding: 10px;
+    width: var(--width-collapsed);
+    box-sizing: border-box;
+}
+
+#sidemenu #header #menu-btn:hover {
+    background-color: var(--hovercolor);
+}
+
+#sidemenu #header #menu-btn .btn-hamburger {
+    background-color: #fff;
+    width: 100%;
+    height: 2px;
+    margin: 6px 0;
+    transition: 0.5s ease;
+}
+
+/* 
+Profile
+*/
+
+#sidemenu #profile {
+    border-bottom: solid .3px rgb(17, 1, 1);
+    padding: var(--padding) 0;
+    text-align: center;
+    transition: 1s;
+    margin-bottom: 8px;
+}
+
+#sidemenu #profile #photo {
+    box-sizing: border-box;
+    padding: var(--padding);
+    margin: 0 auto;
+    transition: 1s;
+    width: 100%;
+}
+
+#sidemenu #profile #photo img {
+    border-radius: 50%;
+    height: 20%;
+    width: 50%;
+}
+
+#sidemenu #profile #photo,
+#sidemenu #profile #name {
+    font-size: 24px;
+    padding: var(--padding) 0;
+    overflow: hidden;
+    transition: 3s;
+}
+
+/* Items */
+
+#sidemenu #menu-items {
+    overflow: hidden;
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+}
+
+#sidemenu #menu-items .item .icon,
+#sidemenu #menu-items .item .title {
+    font-size: 14px;
+    vertical-align: middle;
+    overflow: hidden;
+    display: inline-block;
+    transition: 1s;
+}
+
+#sidemenu #menu-items .item a {
+    display: block;
+}
+
+#sidemenu #menu-items .item a:hover {
+    background-color: var(--hovercolor);
+}
+
+#sidemenu #menu-items .item .icon {
+    box-sizing: border-box;
+    padding: var(--padding);
+    width: var(--width-collapsed);
+    transition: 1s;
+}
+
+#sidemenu #menu-items .item .icon img {
+    width: 100%;
+}
+
+#sidemenu #menu-items .item .title {
+    padding: var(--padding) 0;
+}
+
+#sidemenu #menu-items .item.separator {
+    height: 1px;
+    border-bottom: solid .4px rgba(10, 8, 8, 0.247);
+    box-shadow: 2px 5px 20px black;
+    margin: 15px 0;
+}
+
+.menu-expanded {
+    width: var(--width);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.menu-expanded #header #title {
+    display: inline-block;
+    width: calc(100% -50px);
+    margin-right: -5px;
+    padding: var(--padding);
+}
+
+.menu-expanded #header #title span {
+    width: calc(var(--width) - var(--width-collapsed) - 5px);
+    overflow: hidden;
+    transition: 2s ease;
+}
+
+.menu-expanded #profile #photo {
+    width: 200px;
+    transition: 1s;
+}
+
+.menu-expanded #profile #name {
+    width: 100%;
+    transition: 1s;
+}
+
+.menu-collapsed {
+    width: var(--width-collapsed);
+    transition: 1s;
+}
+
+.menu-collapsed #header #title {
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    transition: 1s;
+}
+
+.menu-collapsed #profile #name {
+    display: none;
+    opacity: 0;
+}
+
+.menu-collapsed #menu-items .item a span {
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.menu-collapsed .item {
+    width: 100px;
+}

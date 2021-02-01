@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre nosotros</title>
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="shortcut icon" href="https://www.crearlogogratisonline.com/images/crearlogogratis_1024x1024_01.png"
+        type="image/x-icon">
+</head>
+
+<body>
+    <div id="sidemenu" class="menu-collapsed">
+        <!-- HEADER -->
+        <div id="header">
+            <div id="title">
+                <span>-</span></div>
+            <div id="menu-btn">
+                <div class="btn-hamburger"></div>
+                <div class="btn-hamburger"></div>
+                <div class="btn-hamburger"></div>
+            </div>
+        </div>
+        <!-- PROFILE -->
+
+        <div id="profile">
+            <div id="photo"><img src="https://www.crearlogogratisonline.com/images/crearlogogratis_1024x1024_01.png"
+                    alt="imagen perfil" width="50"></div>
+            <div id="name"><span>ITService</span></div>
+        </div>
+
+        <!-- ITEMS -->
+        <div id="menu-items">
+            <div class="item">
+                <a href="index.html">
+                    <div class="icon">
+                        <img src="IMG/63633.png" width="150" alt="icon inicio">
+                    </div>
+                    <div class="title"><span>Inicio</span></div>
+                </a>
+            </div>
+            <div class="item separator">
+
+            </div>
+            <div class="item">
+                <a href="Servicios.html">
+                    <div class="icon">
+                        <img src="IMG/cloud-services.png" width="150" alt="icon inicio">
+                    </div>
+                    <div class="title" id="title-no1"><span>Servicios</span></div>
+                </a>
+            </div>
+            <div class="item separator">
+
+            </div>
+            <div class="item">
+                <a href="nosotros.html">
+                    <div class="icon">
+                        <img src="IMG/cloud-services2.png" width="150" alt="icon inicio">
+                    </div>
+                    <div class="title" id="title-no1" style="border-bottom: 2px solid cyan;"><span>Nosotros</span></div>
+                </a>
+            </div>
+            <div class="item separator">
+
+            </div>
+            <div class="item">
+                <a href="contacto.html">
+                    <div class="icon">
+                        <img src="IMG/contacto.png" width="150" alt="icon inicio">
+                    </div>
+                    <div class="title" id="title-no1"><span>Contacto</span></div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <main>
+        <h2 class="centrar-texto">
+            Sobre Nosotros
+        </h2>
+
+        <div class="grid">
+            <div class="colums">
+                <img src="https://www.crearlogogratisonline.com/images/crearlogogratis_1024x1024_01.png" alt="Logo">
+            </div>
+            <div class="colums">
+                <p>
+                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati impedit fuga, in tempore
+                        vero sed architecto iusto ex esse tenetur maiores aut molestias voluptatum nesciunt mollitia
+                        assumenda. Assumenda, culpa ab.</span>
+                    <span>Minima commodi eos placeat asperiores dicta, velit officia porro ea praesentium qui error,
+                        modi facere, tempora iste reprehenderit dolore esse atque culpa mollitia! Nulla similique quidem
+                        tempora, mollitia vero natus.</span>
+                    <span>Obcaecati, asperiores. Asperiores laborum ea illo? Molestiae sit sint cum, officiis unde
+                        repellat modi eaque itaque fuga harum veritatis architecto odit dolore omnis iusto voluptas
+                        autem vitae nisi dolorem neque.</span>
+                    <span>Reiciendis quasi esse fugiat commodi beatae nesciunt ullam accusantium ipsa id nihil sed
+                        nostrum, tempore asperiores mollitia fuga praesentium vitae repudiandae corrupti. Repellendus ad
+                        non saepe adipisci tempore totam nihil.</span>
+                    <span>Repudiandae repellat nobis ratione nulla? Sed facere dicta eveniet temporibus accusamus animi
+                        explicabo earum, cumque rem sint, repellendus veniam expedita numquam in? Aliquam, rem suscipit
+                        numquam dolorem reiciendis harum placeat?</span>
+                    <span>Accusamus, quia. Dicta iusto quibusdam sequi sed dolore natus consequatur earum laboriosam
+                        voluptate, reiciendis, exercitationem totam odio sunt animi unde tempora ad maiores, ex impedit
+                        amet eligendi temporibus? Voluptatibus, neque.</span>
+                </p>
+            </div>
+        </div>
+    </main>
+    <script>
+        const btn = document.querySelector('#menu-btn');
+        const menu = document.querySelector('#sidemenu');
+
+        btn.addEventListener('click', e => {
+            menu.classList.toggle("menu-expanded");
+            menu.classList.toggle("menu-collapsed");
+
+
+            document.querySelector('body').classList.toggle('body-expanded');
+            document.querySelector('body').style.transition = "0.4s";
+
+
+
+            setTimeout(() => {
+                var profile_transition = document.querySelector('#profile').style.boxShadow =
+                    "inset -4px 10px 20px -8px black"
+            }, 500);
+
+        });
+
+        btn.addEventListener('click', b => {
+            document.querySelector('#profile').style.boxShadow = "none";
+        });
+    </script>
+</body>
+
+</html>
